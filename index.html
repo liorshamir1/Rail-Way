@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+    <link rel="stylesheet" href="station.css">
+    <link rel="stylesheet" href="dropDown.css">
+    <link rel="stylesheet" href="form.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="initMap.js"></script>
+    <script src="placesInfo.js"></script>
+    <script src="markersInfo.js"></script>
+    <script src="station.js"></script>
+    <script src="buttonsCreator.js"></script>
+    <script src="filter.js"></script>
+    <div id="logo_container"><span id="main-title">RailWay</span><img src='./logo.jpg'></img> </div>
+ </head>
+ <body>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSyl7hbgjZy2CO4jmxlNrJScw0mDMrsfA&callback=initMap&region=IL&language=he&libraries=places&components=country:IL"></script>
+    <div id='main-area'>
+        <div id='menu-bar'>
+            <button disabled class= "button-18 main_menu" id='drop-button' onclick="dropStationList()">Find train stations</button>
+            <button disabled class= "button-18 main_menu" id='clear-markers' onclick="clearMap()">Clear Map</button>
+            <button class= "button-18 main_menu" id='my-location' onclick="getLocation()">Set My Location</button>
+            <div id='filter-container'>
+           </div>
+           <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+            <div class="txt" id="loading" style="margin-top: 2px">loading</div>
+            <div id='left-sidebar' class="sidebar">
+     </div>
+        </div>
+     
+     <div id='map-wrapper'>
+         <div id='map'></div>
+     </div>
+    <div id='right-sidebar' class="sidebar">
+        <button disabled class= "button-64 side_menu" id='favorites' onclick="showFavoriteStation()">
+            <span class="txt">Favorites</span></button>
+        <button disabled class= "button-64 side_menu" id='filter' onclick="filterBy()">
+            <span class="txt">Filter</span></button>    
+    </div>
+     </div>
+        
+ <body>
